@@ -142,6 +142,7 @@
             <!--</plugin>-->
 
         </plugins>
+        <!-- 根据profile编译项目生产对应的配置文件 ${xxx}替换 } -->
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
@@ -240,7 +241,6 @@
 
                 <shiro.uid.cookie.domain></shiro.uid.cookie.domain>
                 <shiro.uid.cookie.path>/</shiro.uid.cookie.path>
-
             </properties>
         </profile>
         <profile>
@@ -255,13 +255,13 @@
                 <connection.url>
                     <![CDATA[jdbc:mysql://localhost:3306/${db.name}?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8]]>
                 </connection.url>
-                <connection.username>root</connection.username>
-                <connection.password>root</connection.password>
+                <connection.username>root-it</connection.username>
+                <connection.password>root-it</connection.password>
                 <jpa.showSql>false</jpa.showSql>
                 <jpa.generateDdl>false</jpa.generateDdl>
                 <jpa.database>MYSQL</jpa.database>
                 <jpa.databasePlatform>org.hibernate.dialect.MySQL5InnoDBDialect</jpa.databasePlatform>
-                <log.dir>D:/workspace/platform/es-czd</log.dir>
+                <log.dir>D:/workspace/platform/es-czd/web/logs</log.dir>
 
                 <shiro.uid.cookie.domain></shiro.uid.cookie.domain>
                 <shiro.uid.cookie.path>/</shiro.uid.cookie.path>
@@ -281,8 +281,8 @@
                 <connection.url>
                     <![CDATA[jdbc:mysql://localhost:3306/${db.name}?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8]]>
                 </connection.url>
-                <connection.username>root</connection.username>
-                <connection.password/>
+                <connection.username>root-production</connection.username>
+                <connection.password>root-production</connection.password>
                 <jpa.showSql>false</jpa.showSql>
                 <jpa.generateDdl>false</jpa.generateDdl>
                 <jpa.database>MYSQL</jpa.database>
