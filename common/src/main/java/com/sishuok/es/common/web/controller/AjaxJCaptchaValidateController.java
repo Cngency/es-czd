@@ -3,8 +3,9 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package com.sishuok.es.common.web.jcaptcha;
+package com.sishuok.es.common.web.controller;
 
+import com.sishuok.es.common.web.jcaptcha.JCaptcha;
 import com.sishuok.es.common.web.validate.ValidateResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
