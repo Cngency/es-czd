@@ -283,7 +283,7 @@
                     enable:true,
                     chkStyle:"checkbox",
                     onlyCheckLeaf : false,
-                    onlySelectLeaf : true
+                    onlySelectLeaf : false//chkboxType: { "Y" : "p", "N" : "p" }
                 }
             }
         });
@@ -295,7 +295,7 @@
             var resourceNames = $("#resourceName").val().split(",");
             var $selectedPermissions = $("#permissions option:selected");
             var permissionIds = $selectedPermissions.map(function() {return this.value;}).get().join(",");
-            var permissionNames = $selectedPermissions.map(function() {return this.innerText;}).get().join(",");
+            var permissionNames = $selectedPermissions.map(function() {return $(this).text();}).get().join(",");
 
             if(!resourceIds || !resourceIds.length || !resourceIds[0]) {
                 $.app.alert({

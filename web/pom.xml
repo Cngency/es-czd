@@ -223,6 +223,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
+                <profile.id>development</profile.id>
                 <db.name>es</db.name>
                 <connection.driver_class>com.mysql.jdbc.Driver</connection.driver_class>
                 <connection.admin.url>
@@ -237,7 +238,8 @@
                 <jpa.generateDdl>false</jpa.generateDdl>
                 <jpa.database>MYSQL</jpa.database>
                 <jpa.databasePlatform>org.hibernate.dialect.MySQL5InnoDBDialect</jpa.databasePlatform>
-                <log.dir>D:/workspace/platform/es-czd/web/logs</log.dir>
+                <!--<log.dir>D:/workspace/platform/es-czd/web/logs</log.dir>-->
+                <log.dir>${project.basedir}/logs</log.dir>
 
                 <shiro.uid.cookie.domain></shiro.uid.cookie.domain>
                 <shiro.uid.cookie.path>/</shiro.uid.cookie.path>
@@ -247,6 +249,7 @@
             <!-- integration test -->
             <id>it</id>
             <properties>
+                <profile.id>it</profile.id>
                 <db.name>es</db.name>
                 <connection.driver_class>com.mysql.jdbc.Driver</connection.driver_class>
                 <connection.admin.url>
@@ -261,8 +264,8 @@
                 <jpa.generateDdl>false</jpa.generateDdl>
                 <jpa.database>MYSQL</jpa.database>
                 <jpa.databasePlatform>org.hibernate.dialect.MySQL5InnoDBDialect</jpa.databasePlatform>
-                <log.dir>D:/workspace/platform/es-czd/web/logs</log.dir>
-
+                <!--<log.dir>D:/workspace/platform/es-czd/web/logs</log.dir>-->
+                <log.dir>${project.basedir}/logs</log.dir>
                 <shiro.uid.cookie.domain></shiro.uid.cookie.domain>
                 <shiro.uid.cookie.path>/</shiro.uid.cookie.path>
 
@@ -273,6 +276,7 @@
             <!--正式环境-->
             <id>production</id>
             <properties>
+                <profile.id>production</profile.id>
                 <db.name>es</db.name>
                 <connection.driver_class>com.mysql.jdbc.Driver</connection.driver_class>
                 <connection.admin.url>
@@ -287,7 +291,8 @@
                 <jpa.generateDdl>false</jpa.generateDdl>
                 <jpa.database>MYSQL</jpa.database>
                 <jpa.databasePlatform>org.hibernate.dialect.MySQL5InnoDBDialect</jpa.databasePlatform>
-                <log.dir>/data/backup/es</log.dir>
+                <!--<log.dir>/data/backup/es</log.dir>-->
+                <log.dir>${project.basedir}/logs</log.dir>
 
                 <shiro.uid.cookie.domain>sishuok.com</shiro.uid.cookie.domain>
                 <shiro.uid.cookie.path>/</shiro.uid.cookie.path>

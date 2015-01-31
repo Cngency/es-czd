@@ -163,7 +163,7 @@ $.sys = {
                 "alertText": "* 2到20个汉字、字母、数字或下划线组成，且必须以非数字开头"
             };
             $.validationEngineLanguage.allRules.mobilePhoneNumber = {
-                "regex": /^0{0,1}(13[0-9]|15[7-9]|153|156|18[7-9])[0-9]{8}$/,
+                "regex": /^0{0,1}(13[0-9]|15[7-9]|153|156|18[5-9])[0-9]{8}$/,
                 "alertText": "* 手机号错误"
             };
             var validationEngine = form.validationEngine();

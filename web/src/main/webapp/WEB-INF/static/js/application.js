@@ -971,6 +971,7 @@ $.menus = {
         menus.accordion({
             header:"h3",
             heightStyle:"content",
+            collapsible: true,//功能菜单可折叠开启
             icons : {
                 header: "icon-caret-right",
                 activeHeader: "icon-caret-down"
@@ -1019,7 +1020,7 @@ $.menus = {
             var a = $(this);
             var title = a.text();
             var href = a.attr("href");
-            a.attr("href", "#");
+            //a.attr("href", "#");//virtuecai update 开发模式, 便于调试
             if (href == "#" || href == '') {
                 return;
             }
