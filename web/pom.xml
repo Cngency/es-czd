@@ -119,6 +119,9 @@
                     <dbUpdateScriptsDirectory>
                         <param>src/main/sql/update</param>
                     </dbUpdateScriptsDirectory>
+                    <dbDropStatements>
+                        drop database ${db.name};
+                    </dbDropStatements>
                     <dbCreateStatements>
                         create database ${db.name} CHARACTER SET 'utf8';
                     </dbCreateStatements>
