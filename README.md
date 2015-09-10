@@ -23,7 +23,7 @@
 ### 技术选型
 
 #### 管理
-* maven依赖和项目管理
+* maven(3.3.3)依赖和项目管理
 * git版本控制
 
 #### 后端
@@ -88,10 +88,11 @@
 
 ####2、到项目的根下(es)
 * cd bin
-* install.bat 安装jar包到本地仓库（jdk6即可）
+* install.bat 安装jar包到本地仓库（jdk 1.8.0_60）
 * create-db.bat 创建数据库（mysql需要5.5及以上 编码为utf-8）
 * refresh-db.bat 创建schema和初始化data
 * jetty.bat 启动web应用 默认端口9080 可以到es/web/pom.xml下修改（servlet 2.5即可）
+* IntellijIdea tomcat (apache-tomcat-7.0.64) 运行
 * 系统默认帐户是admin/123456
 
 ####3、注意
