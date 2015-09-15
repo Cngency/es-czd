@@ -44,12 +44,16 @@ public class HibernateUtils {
 
     /**
      * 根据jpa EntityManagerFactory 获取 hibernate SessionFactory API
-     *
+     * modify by caizhengda 2015-09-16 具体原因尚未知, try catch 用于兼容 jetty 和 tomcat 不同容器运行锁代码的bug
      * @param emf
      * @return
      */
     public static SessionFactory getSessionFactory(EntityManagerFactory emf) {
-        return ((org.hibernate.jpa.HibernateEntityManagerFactory) emf).getSessionFactory();
+        try {
+            return ((org.hibernate.ejb.HibernateEntityManagerFactory) emf).getSessionFactory();
+        } catch (Exception e) {
+            return ((org.hibernate.jpa.HibernateEntityManagerFactory) emf).getSessionFactory();
+        }
     }
 
     /**

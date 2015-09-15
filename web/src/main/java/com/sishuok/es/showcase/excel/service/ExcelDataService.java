@@ -364,7 +364,7 @@ public class ExcelDataService extends BaseService<ExcelData, Long> {
 
             Map<String, Object> context = Maps.newHashMap();
             context.put("seconds", (endTime - beginTime) / 1000);
-            context.put("url", fileName.replace(contextRootPath, ""));
+            context.put("url", fileName.replace(contextRootPath, "/"));
             notificationApi.notify(user.getId(), "excelExportSuccess", context);
         } catch (Exception e) {
             IOUtils.closeQuietly(out);
@@ -464,7 +464,7 @@ public class ExcelDataService extends BaseService<ExcelData, Long> {
 
             Map<String, Object> context = Maps.newHashMap();
             context.put("seconds", (endTime - beginTime) / 1000);
-            context.put("url", fileName.replace(contextRootPath, ""));
+            context.put("url", fileName.replace(contextRootPath, "/"));
             notificationApi.notify(user.getId(), "excelExportSuccess", context);
         } catch (Exception e) {
             e.printStackTrace();
@@ -560,7 +560,7 @@ public class ExcelDataService extends BaseService<ExcelData, Long> {
 
             Map<String, Object> context = Maps.newHashMap();
             context.put("seconds", (endTime - beginTime) / 1000);
-            context.put("url", fileName.replace(contextRootPath, ""));
+            context.put("url", fileName.replace(contextRootPath, "/"));
             notificationApi.notify(user.getId(), "excelExportSuccess", context);
         } catch (Exception e) {
             e.printStackTrace();
@@ -642,7 +642,7 @@ public class ExcelDataService extends BaseService<ExcelData, Long> {
 
             Map<String, Object> context = Maps.newHashMap();
             context.put("seconds", (endTime - beginTime) / 1000);
-            context.put("url", fileName.replace(contextRootPath, ""));
+            context.put("url", fileName.replace(contextRootPath, "/"));
             notificationApi.notify(user.getId(), "excelExportSuccess", context);
         } catch (Exception e) {
             IOUtils.closeQuietly(out);
@@ -730,7 +730,7 @@ public class ExcelDataService extends BaseService<ExcelData, Long> {
 
             Map<String, Object> context = Maps.newHashMap();
             context.put("seconds", (endTime - beginTime) / 1000);
-            context.put("url", fileName.replace(contextRootPath, ""));
+            context.put("url", fileName.replace(contextRootPath, "/"));
             notificationApi.notify(user.getId(), "excelExportSuccess", context);
         } catch (Exception e) {
             IOUtils.closeQuietly(out);

@@ -44,10 +44,17 @@ public class OnlineEditorUtils {
 
     public static Map<Object, Object> extractFileInfoMap(File currentFile, String rootPath)
             throws UnsupportedEncodingException {
+        // bug 修复 modifby caizhengda
+        //rootPath 比 currentFIlePath 多出一个 File.separator 导致路径无法替换bug
+        String currentFilePath = currentFile.getAbsolutePath().replace("\\", File.separator);
+        rootPath = rootPath.replace("\\", File.separator);
+        if(rootPath.endsWith(File.separator) && !currentFilePath.endsWith(File.separator)) {
+            currentFilePath = currentFilePath + File.separator;
+        }
         Map<Object, Object> info = Maps.newHashMap();
         String name = currentFile.getName();
         info.put("name", name);
-        info.put("path", URLEncoder.encode(currentFile.getAbsolutePath().replace(rootPath, ""), Constants.ENCODING));
+        info.put("path", URLEncoder.encode(currentFilePath.replace(rootPath, ""), Constants.ENCODING));
         info.put("canEdit", canEdit(name));
         info.put("hasParent", !currentFile.getPath().equals(rootPath));
         info.put("isParent", hasSubFiles(currentFile));

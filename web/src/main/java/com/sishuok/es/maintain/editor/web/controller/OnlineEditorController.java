@@ -151,7 +151,7 @@ public class OnlineEditorController extends BaseController {
 
         Sort sort = pageable.getSort();
 
-        String rootPath = sc.getRealPath(ROOT_DIR);
+        String rootPath = sc.getRealPath("");
 
         File currentDirectory = new File(rootPath + File.separator + path);
 

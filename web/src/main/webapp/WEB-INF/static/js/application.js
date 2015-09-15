@@ -343,9 +343,9 @@ $.app = {
                     var data = dataList[i];
                     if(!data.read) {
                         hasUnread = true;
-                        data.title = data.title.replace("{ctx}", ctx);
-                        data.content = data.content.replace("{ctx}", ctx);
                     }
+                    data.title = data.title.replace("{ctx}", ctx);
+                    data.content = data.content.replace("{ctx}", ctx);
                 }
 
                initMenu(dataList, hasUnread);
